@@ -186,6 +186,7 @@ class User
                 case 'fr': $loc = LOCALE_FR; break;
                 case 'de': $loc = LOCALE_DE; break;
                 case 'zh': $loc = LOCALE_CN; break;         // may cause issues in future with zh-tw
+                case 'zh': $loc = LOCALE_TW; break;
                 case 'es': $loc = LOCALE_ES; break;
                 case 'ru': $loc = LOCALE_RU; break;
                 default:   $loc = LOCALE_EN;

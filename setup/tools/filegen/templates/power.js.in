@@ -72,6 +72,7 @@ if (typeof $WowheadPower == "undefined") {
                 2: { achievementComplete: "Haut-fait reçu par $1 le $2/$3/$4",        loading: "Chargement…", noResponse: "Pas de réponse du serveur :(",     notFound: "%s non trouvé"      },
                 3: { achievementComplete: "Erfolg wurde von $1 am $3.$2.$4 errungen", loading: "Lädt…",       noResponse: "Keine Antwort vom Server :(",      notFound: "%s nicht gefunden"  },
                 4: { achievementComplete: "$1在$2/$3/$4上获得成就",                     loading: "正在载入…",    noResponse: "服务器没有响应 :(",                   notFound: "%s未找到"            },
+                5: { achievementComplete: "$1在$2/$3/$4上解鎖成就",                     loading: "正在讀取…",    noResponse: "伺服器没有回應 :(",                   notFound: "%s未找到"            },
                 8: { achievementComplete: "$1 получил(а) это достижение $2/$3/$4",    loading: "Загрузка…",   noResponse: "Нет ответа от сервера :(",         notFound: "%s не найдено"      },
                 6: { achievementComplete: "Logro conseguido por $1 el $2/$3/$4",      loading: "Cargando…",   noResponse: "No hay respuesta del servidor :(", notFound: "%s no encontrado/a" },
             },
@@ -97,6 +98,7 @@ if (typeof $WowheadPower == "undefined") {
                 2: "frfr",
                 3: "dede",
                 4: "zhcn",
+                5: "zhtw",
                 6: "eses",
                 8: "ruru"
             },
@@ -364,12 +366,12 @@ if (typeof $WowheadPower == "undefined") {
                 locale = $WH.g_getLocaleFromDomain(domain);
 
                 /* edit start */
-                if ($WH.in_array(['fr', 'de', 'cn', 'es', 'ru', 'en'], domain) == -1) {
+                if ($WH.in_array(['fr', 'de', 'cn', 'tw', 'es', 'ru', 'en'], domain) == -1) {
                     for (i in document.scripts) {
                         if (!document.scripts[i].src)
                             continue;
 
-                        var dmn = document.scripts[i].src.match(/widgets\/power.js\?(lang|locale)=(en|fr|de|cn|es|ru)/i);
+                        var dmn = document.scripts[i].src.match(/widgets\/power.js\?(lang|locale)=(en|fr|de|cn|tw|es|ru)/i);
                         if (dmn) {
                             domain = dmn[2];
                             locale = $WH.g_getLocaleFromDomain(dmn[2]);

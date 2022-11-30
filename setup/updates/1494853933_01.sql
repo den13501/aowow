@@ -3,5 +3,7 @@ ALTER TABLE `aowow_shapeshiftforms`
 	DROP COLUMN `name_loc0`,
 	DROP COLUMN `name_loc2`,
 	DROP COLUMN `name_loc3`,
+	DROP COLUMN `name_loc4`,
+	DROP COLUMN `name_loc5`,    
 	DROP COLUMN `name_loc6`,
 	DROP COLUMN `name_loc8`;

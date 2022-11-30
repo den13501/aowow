@@ -20,6 +20,7 @@ class CLISetup
         'frFR' => LOCALE_FR,
         'deDE' => LOCALE_DE,
         'zhCN' => LOCALE_CN,    'enCN' => LOCALE_CN,
+        'zhTW' => LOCALE_TW,    'enTW' => LOCALE_TW,
         'esES' => LOCALE_ES,    'esMX' => LOCALE_ES,
         'ruRU' => LOCALE_RU
     );
@@ -50,7 +51,7 @@ class CLISetup
         'log'              => [2, [],                0x01, 'Write CLI ouput to file.',                                                                                  '=logfile'          ],
         'help'             => [2, ['h'],             0x00, 'Display contextual help, if available.',                                                                    ''                  ],
         'force'            => [2, ['f'],             0x00, 'Force existing files to be overwritten.',                                                                   ''                  ],
-        'locales'          => [2, [],                0x12, 'Limit setup to enUS, frFR, deDE, zhCN, esES and/or ruRU. (does not override config settings)',              '=<regionCodes,>'   ],
+        'locales'          => [2, [],                0x12, 'Limit setup to enUS, frFR, deDE, zhCN, zhTW, esES and/or ruRU. (does not override config settings)',              '=<regionCodes,>'   ],
         'mpqDataDir'       => [2, [],                0x02, 'Manually point to directory with extracted mpq files. This is limited to setup/ (default: setup/mpqData/)', '=path/'            ],
         'icons'            => [3, ['1'],             0x00, 'Generate icons for spells, items, classes, races, ect.',                                                    ''                  ],
         'glyphs'           => [3, ['2'],             0x00, 'Generate decorative glyph symbols displayed on related item and spell pages.',                              ''                  ],
@@ -115,8 +116,8 @@ class CLISetup
         if (isset(self::$opts['locales']))
         {
             // engb and enus are identical for all intents and purposes
-            $from = ['engb', 'esmx', 'encn'];
-            $to   = ['enus', 'eses', 'zhcn'];
+            $from = ['engb', 'esmx', 'encn', 'enTW'];
+            $to   = ['enus', 'eses', 'zhcn', 'zhTW'];
             $opts['locales'] = str_ireplace($from, $to, strtolower($opts['locales']));
 
             self::$locales = array_intersect(Util::$localeStrings, explode(',', $opts['locales']));

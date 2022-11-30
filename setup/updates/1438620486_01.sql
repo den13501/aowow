@@ -19,6 +19,8 @@ CREATE TABLE `aowow_itemenchantment` (
   `name_loc0` varchar(65) NOT NULL,
   `name_loc2` varchar(91) NOT NULL,
   `name_loc3` varchar(84) NOT NULL,
+  `name_loc4` varchar(84) NOT NULL,
+  `name_loc5` varchar(84) NOT NULL,
   `name_loc6` varchar(89) NOT NULL,
   `name_loc8` varchar(96) NOT NULL,
   `conditionId` tinyint(3) unsigned NOT NULL,

@@ -28,7 +28,7 @@ DROP TABLE IF EXISTS `dbc_taxinodes`;
 DROP TABLE IF EXISTS `dbc_totemcategory`;
 
 -- update config
-UPDATE `aowow_config` SET `comment` = 'default: 0x15D - allowed locales - 0:English, 2:French, 3:German, 4:Chinese, 6:Spanish, 8:Russian' WHERE `key` = 'locales';
+UPDATE `aowow_config` SET `comment` = 'default: 0x15D - allowed locales - 0:English, 2:French, 3:German, 4:Chinese, 5:Taiwanese, 6:Spanish, 8:Russian' WHERE `key` = 'locales';
 
 -- rebuild affected files
 UPDATE `aowow_dbversion` SET `sql` = CONCAT(IFNULL(`sql`, ''), ' achievementcategory achievementcriteria itemenchantment itemlimitcategory mailtemplate spellfocusobject spellrange totemcategory classes factions holidays itemrandomenchant races shapeshiftforms skillline emotes achievement creature currencies objects pet quests spell taxi titles items zones itemset'), `build` = CONCAT(IFNULL(`build`, ''), ' complexImg locales statistics talentCalc pets glyphs itemsets enchants gems profiler');

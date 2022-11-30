@@ -421,11 +421,11 @@ abstract class Util
     private static $perfectGems             = null;
 
     public static $localeStrings            = array(        // zero-indexed
-        'enus',         null,           'frfr',         'dede',         'zhcn',         null,           'eses',         null,           'ruru'
+        'enus',         null,           'frfr',         'dede',         'zhcn',         'zhtw',           'eses',         null,           'ruru'
     );
 
     public static $subDomains               = array(
-        'www',          null,           'fr',           'de',           'cn',           null,           'es',           null,           'ru'
+        'www',          null,           'fr',           'de',           'cn',           'tw',           'es',           null,           'ru'
     );
 
     public static $regions                   = array(

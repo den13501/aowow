@@ -150,6 +150,7 @@ define('LOCALE_EN',                         0);
 define('LOCALE_FR',                         2);
 define('LOCALE_DE',                         3);
 define('LOCALE_CN',                         4);
+define('LOCALE_TW',                         5);
 define('LOCALE_ES',                         6);
 define('LOCALE_RU',                         8);
 

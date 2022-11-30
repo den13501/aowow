@@ -45,6 +45,7 @@ class Lang
         LOCALE_FR => 'Français',
         LOCALE_DE => 'Deutsch',
         LOCALE_CN => '简体中文',
+        LOCALE_TW => '正體中文',
         LOCALE_ES => 'Español',
         LOCALE_RU => 'Русский'
     );
@@ -484,6 +485,7 @@ class Lang
             LOCALE_FR => [' ', ','],
             LOCALE_DE => ['.', ','],
             LOCALE_CN => [',', '.'],
+            LOCALE_TW => [',', '.'],
             LOCALE_ES => ['.', ','],
             LOCALE_RU => [' ', ',']
         );
